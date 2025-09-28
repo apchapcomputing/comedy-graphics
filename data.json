@@ -1,0 +1,32 @@
+{
+    "month": "October",
+    "year": "2025",
+    "shows": [
+        {
+            "type": "Improv Show",
+            "day": "Thursday",
+            "date": "October 2nd",
+            "time": "7pm",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens"
+        },
+        {
+            "type": "Stand Up Open Mic",
+            "day": "Friday",
+            "date": "October 10th",
+            "time": "8pm",
+            "venue": "Durty Bull Brewing",
+            "city": "Durham, NC"
+        },
+        {
+            "type": "Improv Show",
+            "day": "Saturday",
+            "date": "October 4th",
+            "time": "9pm",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Rat People"
+        }
+    ]
+}
