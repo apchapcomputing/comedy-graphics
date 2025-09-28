@@ -37,7 +37,7 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
     if (type.toLowerCase().includes('improv')) {
       return 'bg-gradient-energy text-white';
     }
-    if (type.toLowerCase().includes('stand up') || type.toLowerCase().includes('open mic')) {
+    if (type.toLowerCase().includes('stand') || type.toLowerCase().includes('open mic')) {
       return 'bg-gradient-fun text-white';
     }
     return 'bg-gradient-comedy text-foreground';
