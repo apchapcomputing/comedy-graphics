@@ -8,6 +8,7 @@ export interface Show {
   date: string;
   time: string;
   venue: string;
+  city: string;
   group?: string;
   logo: string;
 }
@@ -19,14 +20,14 @@ interface ComedyFlyerProps {
 
 const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
   const getVenueLogo = (venue: string) => {
-    switch (venue.toLowerCase()) {
-      case 'comedyworx':
-        return comedyWorxLogo;
-      case 'durty bull':
-        return durtyBullLogo;
-      default:
-        return '';
+    const venueLower = venue.toLowerCase().trim();
+    if (venueLower.includes('comedyworx')) {
+      return comedyWorxLogo;
     }
+    if (venueLower.includes('durty bull') || venueLower.includes('durty-bull')) {
+      return durtyBullLogo;
+    }
+    return '';
   };
 
   const getShowTypeStyle = (type: string) => {
@@ -40,7 +41,7 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
   };
 
   return (
-    <Card 
+    <Card
       id="comedy-flyer"
       className="w-[500px] h-[500px] p-6 bg-gradient-comedy shadow-comedy border-0 relative overflow-hidden"
     >
@@ -53,10 +54,10 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
       {/* Header */}
       <div className="relative z-10 text-center mb-6">
         <h1 className="font-bold text-3xl text-foreground mb-2">
-          COMEDY SHOWS
+          ASHLYN'S COMEDY SHOWS
         </h1>
         <h2 className="font-comic text-xl text-foreground font-bold">
-          {month} 2024
+          {month} 2025
         </h2>
         <div className="w-20 h-1 bg-comedy-red mx-auto mt-2 rounded-full"></div>
       </div>
@@ -66,7 +67,7 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
         {shows.map((show, index) => (
           <div
             key={index}
-            className={`p-3 rounded-lg transition-all duration-300 hover:scale-105 ${getShowTypeStyle(show.type)}`}
+            className={`p-3 rounded-lg ${getShowTypeStyle(show.type)}`}
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
@@ -80,19 +81,21 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
                     </span>
                   )}
                 </div>
-                <div className="font-comic text-lg font-bold">
-                  {show.day}, {show.date}
+                <div className="font-comic text-lg font-bold flex items-baseline">
+                  <span>{show.day}, {show.date}</span>
+                  <span className="font-normal mx-1">at</span>
+                  <span>{show.time}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <span>{show.time}</span>
-                  <span>•</span>
                   <span>{show.venue}</span>
+                  <span>•</span>
+                  <span>{show.city}</span>
                 </div>
               </div>
-              
+
               {/* Venue Logo */}
               {getVenueLogo(show.venue) && (
-                <div className="w-12 h-12 bg-white rounded-full p-1 flex items-center justify-center ml-3">
+                <div className="w-14 h-14 bg-white rounded-full p-2 flex items-center justify-center ml-3">
                   <img
                     src={getVenueLogo(show.venue)}
                     alt={`${show.venue} logo`}
@@ -108,23 +111,18 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
       {/* Footer */}
       <div className="absolute bottom-4 left-6 right-6 z-10">
         <div className="text-center">
-          <div className="text-sm font-comic text-foreground/80 mb-1">
-            Follow for more shows!
-          </div>
           <div className="flex justify-center space-x-4 text-xs text-foreground/70">
-            <span>@comedian</span>
-            <span>•</span>
-            <span>comedian.com</span>
+            <span>@apchapcomedy</span>
           </div>
         </div>
       </div>
 
       {/* Decorative elements */}
       <div className="absolute top-6 right-6 z-10">
-        <div className="w-3 h-3 bg-comedy-blue rounded-full animate-pulse"></div>
+        <div className="w-3 h-3 bg-comedy-blue rounded-full"></div>
       </div>
       <div className="absolute top-12 right-8 z-10">
-        <div className="w-2 h-2 bg-comedy-red rounded-full animate-pulse delay-300"></div>
+        <div className="w-2 h-2 bg-comedy-red rounded-full"></div>
       </div>
     </Card>
   );
