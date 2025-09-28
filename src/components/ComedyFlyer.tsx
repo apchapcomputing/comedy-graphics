@@ -32,10 +32,10 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
 
   const getShowTypeStyle = (type: string) => {
     if (type.toLowerCase().includes('improv')) {
-      return 'bg-gradient-fun text-white';
+      return 'bg-gradient-energy text-white';
     }
     if (type.toLowerCase().includes('stand up') || type.toLowerCase().includes('open mic')) {
-      return 'bg-gradient-energy text-white';
+      return 'bg-gradient-fun text-white';
     }
     return 'bg-gradient-comedy text-foreground';
   };
@@ -76,7 +76,7 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
                     {show.type}
                   </span>
                   {show.group && (
-                    <span className="text-xs bg-black/20 px-2 py-1 rounded-full">
+                    <span className="text-xs bg-foreground/10 px-2 py-1 rounded-full">
                       with {show.group}
                     </span>
                   )}

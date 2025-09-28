@@ -39,15 +39,6 @@ const Index = () => {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="text-center">
         <ComedyFlyer shows={shows} month="October" />
-
-        {/* Download Button */}
-        <div className="mt-6">
-          <DownloadButton
-            targetId="comedy-flyer"
-            filename="october-comedy-shows"
-          />
-        </div>
-
       </div>
     </div>
   );
