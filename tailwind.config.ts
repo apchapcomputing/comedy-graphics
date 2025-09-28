@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Comedy brand colors
+        comedy: {
+          yellow: "hsl(var(--comedy-yellow))",
+          orange: "hsl(var(--comedy-orange))",
+          red: "hsl(var(--comedy-red))",
+          purple: "hsl(var(--comedy-purple))",
+          blue: "hsl(var(--comedy-blue))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +70,23 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-comedy': 'var(--gradient-comedy)',
+        'gradient-fun': 'var(--gradient-fun)',
+        'gradient-energy': 'var(--gradient-energy)',
+      },
+      boxShadow: {
+        'comedy': 'var(--shadow-comedy)',
+        'fun': 'var(--shadow-fun)',
+      },
+      transitionTimingFunction: {
+        'bounce': 'var(--transition-bounce)',
+        'smooth': 'var(--transition-smooth)',
+      },
+      fontFamily: {
+        'comic': ['Comic Neue', 'cursive'],
+        'bold': ['Fredoka One', 'cursive'],
       },
       keyframes: {
         "accordion-down": {

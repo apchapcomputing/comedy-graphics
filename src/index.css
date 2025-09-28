@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Comedy Flyer Design System - Vibrant & Energetic 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors */
+    --background: 15 25% 95%;
+    --foreground: 240 10% 15%;
 
+    /* Comedy brand colors - energetic and fun */
+    --comedy-yellow: 45 98% 55%;
+    --comedy-orange: 25 95% 58%;
+    --comedy-red: 0 85% 60%;
+    --comedy-purple: 280 75% 65%;
+    --comedy-blue: 220 80% 60%;
+
+    /* Card styling */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 240 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - comedy yellow */
+    --primary: 45 98% 55%;
+    --primary-foreground: 240 10% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - comedy purple */
+    --secondary: 280 75% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 15 15% 90%;
+    --muted-foreground: 240 5% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - comedy orange */
+    --accent: 25 95% 58%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 15 15% 85%;
+    --input: 15 15% 85%;
+    --ring: 45 98% 55%;
 
-    --radius: 0.5rem;
+    /* Custom gradients for comedy flyer */
+    --gradient-comedy: linear-gradient(135deg, hsl(45 98% 55%), hsl(25 95% 58%));
+    --gradient-fun: linear-gradient(120deg, hsl(280 75% 65%), hsl(220 80% 60%));
+    --gradient-energy: linear-gradient(45deg, hsl(0 85% 60%), hsl(25 95% 58%));
+
+    /* Shadows with comedy colors */
+    --shadow-comedy: 0 10px 30px -5px hsl(45 98% 55% / 0.3);
+    --shadow-fun: 0 8px 25px -5px hsl(280 75% 65% / 0.25);
+
+    /* Animation timings */
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
