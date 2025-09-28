@@ -40,7 +40,10 @@ const ComedyFlyer = ({ shows, month }: ComedyFlyerProps) => {
   };
 
   return (
-    <Card className="w-[500px] h-[500px] p-6 bg-gradient-comedy shadow-comedy border-0 relative overflow-hidden">
+    <Card 
+      id="comedy-flyer"
+      className="w-[500px] h-[500px] p-6 bg-gradient-comedy shadow-comedy border-0 relative overflow-hidden"
+    >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-32 h-32 bg-comedy-purple rounded-full transform translate-x-16 -translate-y-16"></div>

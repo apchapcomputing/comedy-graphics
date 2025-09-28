@@ -1,4 +1,5 @@
 import ComedyFlyer, { Show } from "@/components/ComedyFlyer";
+import DownloadButton from "@/components/DownloadButton";
 
 const Index = () => {
   // Test shows data - easily replaceable each month
@@ -35,6 +36,14 @@ const Index = () => {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="text-center">
         <ComedyFlyer shows={shows} month="October" />
+        
+        {/* Download Button */}
+        <div className="mt-6">
+          <DownloadButton 
+            targetId="comedy-flyer" 
+            filename="october-comedy-shows" 
+          />
+        </div>
         
         {/* Instructions for updating */}
         <div className="mt-8 max-w-md mx-auto text-left bg-card p-6 rounded-lg shadow-fun">
