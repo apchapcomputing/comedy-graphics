@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
-import durtyBullLogo from "@/assets/durty-bull-logo.png";
+import alchemyLogo from "@/assets/alchemy-logo.png";
 import comedyWorxLogo from "@/assets/comedyworx-logo.png";
+import durtyBullLogo from "@/assets/durty-bull-logo.png";
 import defaultLogo from "@/assets/default-logo.png";
+import festivalIcon from "@/assets/festival-icon.png";
 
 export interface Show {
   type: string;
@@ -12,6 +14,7 @@ export interface Show {
   city: string;
   group?: string;
   logo: string;
+  details?: string;
 }
 
 interface ComedyFlyerProps {
@@ -23,13 +26,17 @@ interface ComedyFlyerProps {
 const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
   const getVenueLogo = (venue: string) => {
     const venueLower = venue.toLowerCase().trim();
-    if (venueLower.includes('comedyworx')) {
-      return comedyWorxLogo;
+
+    switch (true) {
+      case venueLower.includes('comedyworx'):
+        return comedyWorxLogo;
+      case venueLower.includes('durty bull') || venueLower.includes('durty-bull'):
+        return durtyBullLogo;
+      case venueLower.includes('alchemy'):
+        return alchemyLogo;
+      default:
+        return defaultLogo;
     }
-    if (venueLower.includes('durty bull') || venueLower.includes('durty-bull')) {
-      return durtyBullLogo;
-    }
-    return defaultLogo;
   };
 
 
@@ -69,7 +76,14 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
+                {show.details && (
+                  <div className="flex mb-1">
+                    <span className="font-comic text-xl font-extrabold uppercase tracking-wider">
+                      {show.details}
+                    </span>
+                  </div>
+                )}
+                <div className="flex items-center mb-1 space-x-2">
                   <span className="font-comic text-sm font-bold uppercase tracking-wide">
                     {show.type}
                   </span>
