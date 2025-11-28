@@ -4,22 +4,22 @@
     "shows": [
         {
             "type": "Improv",
-            "day": "Saturday",
-            "date": "November 1",
-            "time": "9 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Rat People"
+            "day": "Friday",
+            "date": "November 28",
+            "time": "7 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Mango! Mango!",
+            "details": "My indie team's debut show!"
         },
         {
             "type": "Improv",
-            "day": "Friday",
-            "date": "November 7",
-            "time": "6 PM",
-            "venue": "Alchemy",
-            "city": "Greenville, SC",
-            "group": "Nerd Lens",
-            "details": "New South Comedy Festival"
+            "day": "Saturday",
+            "date": "November 29",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens & Rat People"
         }
     ]
 }
