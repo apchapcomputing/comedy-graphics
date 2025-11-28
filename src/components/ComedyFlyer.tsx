@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import alchemyLogo from "@/assets/alchemy-logo.png";
 import comedyWorxLogo from "@/assets/comedyworx-logo.png";
 import durtyBullLogo from "@/assets/durty-bull-logo.png";
+import mettlesomeLogo from "@/assets/mettlesome-logo.png"
 import defaultLogo from "@/assets/default-logo.png";
 import festivalIcon from "@/assets/festival-icon.png";
 
@@ -28,12 +29,14 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
     const venueLower = venue.toLowerCase().trim();
 
     switch (true) {
+      case venueLower.includes('alchemy'):
+        return alchemyLogo;
       case venueLower.includes('comedyworx'):
         return comedyWorxLogo;
       case venueLower.includes('durty bull') || venueLower.includes('durty-bull'):
         return durtyBullLogo;
-      case venueLower.includes('alchemy'):
-        return alchemyLogo;
+      case venueLower.includes('mettlesome'):
+        return mettlesomeLogo;
       default:
         return defaultLogo;
     }
