@@ -1,25 +1,34 @@
 {
-    "month": "November",
+    "month": "December",
     "year": "2025",
     "shows": [
         {
             "type": "Improv",
             "day": "Friday",
-            "date": "November 28",
-            "time": "7 PM",
+            "date": "December 12",
+            "time": "6:30 PM",
             "venue": "Mettlesome",
             "city": "Durham, NC",
-            "group": "Mango! Mango!",
-            "details": "My indie team's debut show!"
+            "group": "8 Days a Week",
+            "details": "My Secret Society team's debut show!"
+        },
+        {
+            "type": "Improv",
+            "day": "Thursday",
+            "date": "December 18",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens"
         },
         {
             "type": "Improv",
             "day": "Saturday",
-            "date": "November 29",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Nerd Lens & Rat People"
+            "date": "December 20",
+            "time": "5 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "8 Days a Week"
         }
     ]
 }
