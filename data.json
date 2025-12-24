@@ -1,34 +1,34 @@
 {
-    "month": "December",
-    "year": "2025",
+    "month": "January",
+    "year": "2026",
     "shows": [
         {
             "type": "Improv",
             "day": "Friday",
-            "date": "December 12",
-            "time": "6:30 PM",
+            "date": "January 2",
+            "time": "6 PM",
             "venue": "Mettlesome",
             "city": "Durham, NC",
-            "group": "8 Days a Week!",
-            "details": "team premiere!"
-        },
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "December 18",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Nerd Lens"
+            "group": "8 Days a Week!"
         },
         {
             "type": "Improv",
             "day": "Saturday",
-            "date": "December 20",
-            "time": "5 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "8 Days a Week!"
+            "date": "January 3",
+            "time": "9 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Rat People"
+        },
+        {
+            "type": "Improv",
+            "day": "Saturday",
+            "date": "January 31",
+            "time": "7:30 PM",
+            "venue": "Phi Beta Kappa Hall",
+            "city": "Williamsburg, VA",
+            "group": "Last Word Academy",
+            "details": "Last Word Comedy Festival"
         }
     ]
 }

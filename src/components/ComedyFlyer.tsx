@@ -4,7 +4,7 @@ import comedyWorxLogo from "@/assets/comedyworx-logo.png";
 import durtyBullLogo from "@/assets/durty-bull-logo.png";
 import mettlesomeLogo from "@/assets/mettlesome-logo.png"
 import defaultLogo from "@/assets/default-logo.png";
-import festivalIcon from "@/assets/festival-icon.png";
+import lastWordLogo from "@/assets/last-word-logo.png";
 
 export interface Show {
   type: string;
@@ -37,6 +37,8 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
         return durtyBullLogo;
       case venueLower.includes('mettlesome'):
         return mettlesomeLogo;
+      case venueLower.includes('phi'):
+        return lastWordLogo;
       default:
         return defaultLogo;
     }
@@ -110,7 +112,7 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
 
               {/* Venue Logo */}
               {getVenueLogo(show.venue) && (
-                <div className="w-14 h-14 bg-white rounded-full p-2 flex items-center justify-center ml-3">
+                <div className="w-20 h-14 bg-white rounded-full p-1 flex items-center justify-center ml-3 overflow-hidden">
                   <img
                     src={getVenueLogo(show.venue)}
                     alt={`${show.venue} logo`}
