@@ -4,6 +4,15 @@
     "shows": [
         {
             "type": "Improv",
+            "day": "Thursday",
+            "date": "January 1",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Mango! Mango!"
+        },
+        {
+            "type": "Improv",
             "day": "Friday",
             "date": "January 2",
             "time": "7 PM",
