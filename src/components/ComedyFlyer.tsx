@@ -58,15 +58,15 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
   return (
     <Card
       id="comedy-flyer"
-      className="w-[500px] h-[500px] p-6 border-0 relative bg-inherit"
+      className="w-[500px] h-full p-6 border-0 relative bg-inherit"
     >
 
       {/* Header */}
       <div className="relative z-10 text-center mb-6">
-        <h1 className="font-bold text-3xl text-foreground mb-2">
-          ASHLYN'S COMEDY SHOWS
+        <h1 className="font-sans font-bold text-3xl text-foreground mb-2">
+          ASHLYN ON STAGE
         </h1>
-        <h2 className="font-comic text-xl text-foreground font-bold">
+        <h2 className="font-caveat text-2xl text-foreground font-bold">
           {month} {year}
         </h2>
         <div className="w-20 h-1 bg-comedy-red mx-auto mt-2 rounded-full"></div>
@@ -83,17 +83,17 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
               <div className="flex-1">
                 {show.details && (
                   <div className="flex mb-1">
-                    <span className="font-comic text-xl font-extrabold uppercase tracking-wider">
+                    <span className="font-caveat text-xl font-extrabold uppercase tracking-wider">
                       {show.details}
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-1 space-x-2">
-                  <span className="font-comic text-sm font-bold uppercase tracking-wide">
+                  <span className="font-caveat text-base font-bold uppercase tracking-wide leading-none">
                     {show.type}
                   </span>
                   {show.group && (
-                    <span className="text-xs bg-foreground/10 px-2 py-1 rounded-full">
+                    <span className="font-mono text-xs bg-foreground/10 px-2 py-1 rounded-full">
                       with {show.group}
                     </span>
                   )}
@@ -103,7 +103,7 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
                   <span className="font-normal mx-1">at</span>
                   <span>{show.time}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm">
+                <div className="font-sans font-light flex items-center gap-2 text-sm">
                   <span>{show.venue}</span>
                   <span>•</span>
                   <span>{show.city}</span>

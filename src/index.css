@@ -1,83 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Dark mode using provided palette (e.g., #282828 etc.) */
+--background: 210 4% 16%;
+/* #282828-ish */
+--foreground: 48 90% 96%;
+/* #fbf1c7 */
 
-/* Comedy Flyer Design System - Vibrant & Energetic 
-All colors MUST be HSL.
-*/
+--card: 210 4% 16%;
+/* dark background */
+--card-foreground: 48 90% 96%;
+
+--popover: 210 4% 16%;
+--popover-foreground: 48 90% 96%;
+
+--primary: 43 92% 56%;
+/* #fabd2f */
+--primary-foreground: 210 4% 16%;
+
+--secondary: 20 6% 32%;
+/* #504945 */
+--secondary-foreground: 48 90% 96%;
+
+--muted: 20 6% 32%;
+/* #504945 */
+--muted-foreground: 38 10% 66%;
+/* #a89984 */
+
+--accent: 22 86% 55%;
+--accent-foreground: 48 90% 96%;
+
+--destructive: 2 72% 45%;
+--destructive-foreground: 48 90% 96%;
+
+--border: 20 6% 32%;
+--input: 20 6% 32%;
+--ring: 43 92% 56%;
+
+--sidebar-background: 210 4% 10%;
+--sidebar-foreground: 210 4% 96%;
+--sidebar-primary: 224 76% 48%;
+--sidebar-primary-foreground: 0 0% 100%;
+--sidebar-accent: 210 4% 16%;
+--sidebar-accent-foreground: 210 4% 96%;
+--sidebar-border: 210 4% 16%;
+--sidebar-ring: 217.2 91.2% 59.8%;
+
+/* Custom gradients for comedy flyer using new palette */
+--gradient-comedy: linear-gradient(135deg, hsl(43 92% 56%), hsl(22 86% 55%));
+--gradient-fun: linear-gradient(120deg, hsl(327 30% 68%), hsl(200 36% 43%));
+--gradient-energy: linear-gradient(45deg, hsl(2 72% 45%), hsl(22 86% 55%));
+
+/* Shadows */
+--shadow-comedy: 0 10px 30px -5px hsl(43 92% 56% / 0.25);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Comedy Flyer Design System - Updated palette from user-provided hex list
+       All colors stored as HSL values for Tailwind compatibility.
+    */
 
 @layer base {
   :root {
-    /* Base colors - Gruvbox light */
-    --background: 47 85% 94%;
-    /* #fbf1c7 */
-    --foreground: 24 13% 25%;
-    /* #3c3836 */
+    /* Light mode (mapped to provided palette) */
+    --background: 48 90% 96%;
+    /* approx #fbf1c7 */
+    --foreground: 14 5% 23%;
+    /* approx #3c3836 */
 
-    /* Gruvbox brand colors */
-    --comedy-yellow: 45 93% 58%;
+    /* Brand / comedy colors */
+    --comedy-yellow: 43 92% 56%;
     /* #fabd2f */
-    --comedy-orange: 26 85% 61%;
+    --comedy-orange: 22 86% 55%;
     /* #fe8019 */
-    --comedy-red: 4 68% 60%;
+    --comedy-red: 2 72% 45%;
     /* #cc241d */
-    --comedy-purple: 333 100% 78%;
+    --comedy-purple: 327 30% 68%;
     /* #d3869b */
-    --comedy-blue: 205 82% 66%;
+    --comedy-blue: 200 36% 43%;
     /* #458588 */
 
-    /* Card styling */
-    --card: 47 85% 94%;
-    /* #fbf1c7 */
-    --card-foreground: 24 13% 25%;
-    /* #3c3836 */
+    /* Card & popover */
+    --card: 48 90% 96%;
+    --card-foreground: 14 5% 23%;
+    --popover: 48 90% 96%;
+    --popover-foreground: 14 5% 23%;
 
-    --popover: 47 85% 94%;
-    /* #fbf1c7 */
-    --popover-foreground: 24 13% 25%;
-    /* #3c3836 */
+    --primary: 43 92% 56%;
+    --primary-foreground: 14 5% 23%;
 
-    /* Primary - gruvbox yellow */
-    --primary: 45 93% 58%;
-    /* #fabd2f */
-    --primary-foreground: 24 13% 25%;
-    /* #3c3836 */
+    --secondary: 20 6% 32%;
+    --secondary-foreground: 48 90% 96%;
 
-    /* Secondary - gruvbox dark gray */
-    --secondary: 15 6% 32%;
-    /* #504945 */
-    --secondary-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --muted: 42 19% 81%;
+    --muted-foreground: 25 10% 46%;
 
-    --muted: 47 32% 87%;
-    /* #ebdbb2 */
-    --muted-foreground: 24 13% 48%;
-    /* #7c6f64 */
+    --accent: 22 86% 55%;
+    --accent-foreground: 48 90% 96%;
 
-    /* Accent - gruvbox orange */
-    --accent: 26 85% 61%;
-    /* #fe8019 */
-    --accent-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --destructive: 2 72% 45%;
+    --destructive-foreground: 48 90% 96%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 42 19% 81%;
+    --input: 42 19% 81%;
+    --ring: 43 92% 56%;
 
-    --border: 47 32% 87%;
-    /* #ebdbb2 */
-    --input: 47 32% 87%;
-    /* #ebdbb2 */
-    --ring: 45 93% 58%;
-    /* #fabd2f */
+    /* Gradients */
+    --gradient-comedy: linear-gradient(135deg, hsl(43 92% 56%), hsl(22 86% 55%));
+    --gradient-fun: linear-gradient(120deg, hsl(327 30% 68%), hsl(200 36% 43%));
+    --gradient-energy: linear-gradient(45deg, hsl(2 72% 45%), hsl(22 86% 55%));
 
-    /* Custom gradients for comedy flyer - Gruvbox */
-    --gradient-comedy: linear-gradient(135deg, hsl(45 93% 58%), hsl(26 85% 61%));
-    --gradient-fun: linear-gradient(120deg, hsl(333 100% 78%), hsl(205 82% 66%));
-    --gradient-energy: linear-gradient(45deg, hsl(4 68% 60%), hsl(26 85% 61%));
-
-    /* Shadows with Gruvbox colors */
-    --shadow-comedy: 0 10px 30px -5px hsl(45 93% 58% / 0.3);
-    --shadow-fun: 0 8px 25px -5px hsl(333 100% 78% / 0.25);
+    /* Shadows */
+    --shadow-comedy: 0 10px 30px -5px hsl(43 92% 56% / 0.25);
+    --shadow-fun: 0 8px 25px -5px hsl(327 30% 68% / 0.2);
 
     /* Animation timings */
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -85,82 +121,59 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
+    /* Sidebar defaults */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 15 6% 16%;
-    /* #282828 */
-    --foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    /* Dark mode (mapped to provided palette) */
+    --background: 210 4% 16%;
+    /* approx #282828 */
+    --foreground: 48 90% 96%;
+    /* approx #fbf1c7 */
 
-    --card: 15 6% 16%;
-    /* #282828 */
-    --card-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --card: 210 4% 16%;
+    --card-foreground: 48 90% 96%;
 
-    --popover: 15 6% 16%;
-    /* #282828 */
-    --popover-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --popover: 210 4% 16%;
+    --popover-foreground: 48 90% 96%;
 
-    --primary: 45 93% 58%;
-    /* #fabd2f */
-    --primary-foreground: 15 6% 16%;
-    /* #282828 */
+    --primary: 43 92% 56%;
+    --primary-foreground: 210 4% 16%;
 
-    --secondary: 15 6% 32%;
-    /* #504945 */
-    --secondary-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --secondary: 20 6% 32%;
+    --secondary-foreground: 48 90% 96%;
 
-    --muted: 15 6% 32%;
-    /* #504945 */
-    --muted-foreground: 24 13% 67%;
-    /* #a89984 */
+    --muted: 20 6% 32%;
+    --muted-foreground: 38 10% 66%;
 
-    --accent: 26 85% 61%;
-    /* #fe8019 */
-    --accent-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --accent: 22 86% 55%;
+    --accent-foreground: 48 90% 96%;
 
-    --destructive: 4 68% 60%;
-    /* #cc241d */
-    --destructive-foreground: 47 85% 94%;
-    /* #fbf1c7 */
+    --destructive: 2 72% 45%;
+    --destructive-foreground: 48 90% 96%;
 
-    --border: 15 6% 32%;
-    /* #504945 */
-    --input: 15 6% 32%;
-    /* #504945 */
-    --ring: 45 93% 58%;
-    /* #fabd2f */
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 20 6% 32%;
+    --input: 20 6% 32%;
+    --ring: 43 92% 56%;
+
+    --sidebar-background: 210 4% 10%;
+    --sidebar-foreground: 210 4% 96%;
+    --sidebar-primary: 224 76% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-accent: 210 4% 16%;
+    --sidebar-accent-foreground: 210 4% 96%;
+    --sidebar-border: 210 4% 16%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
