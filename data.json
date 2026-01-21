@@ -1,34 +1,7 @@
 {
-    "month": "January",
+    "month": "February",
     "year": "2026",
     "shows": [
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "January 1",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Mango! Mango!"
-        },
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "January 2",
-            "time": "7 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "8 Days a Week!"
-        },
-        {
-            "type": "Improv",
-            "day": "Saturday",
-            "date": "January 3",
-            "time": "9 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Rat People"
-        },
         {
             "type": "Improv",
             "day": "Saturday",
@@ -38,6 +11,42 @@
             "city": "Williamsburg, VA",
             "group": "Last Word Academy",
             "details": "Last Word Comedy Festival"
+        },
+        {
+            "type": "Improv",
+            "day": "Thursday",
+            "date": "February 5",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "February 6",
+            "time": "7 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "8 Days a Week!"
+        },
+        {
+            "type": "Giant Robot Fight Club",
+            "day": "Saturday",
+            "date": "February 14",
+            "time": "7 PM",
+            "venue": "Common Market",
+            "city": "Durham, NC",
+            "character": "Blue Bandit"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "February 20",
+            "time": "7 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "8 Days a Week!"
         }
     ]
 }
