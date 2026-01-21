@@ -14,6 +14,7 @@ export interface Show {
   venue: string;
   city: string;
   group?: string;
+  character?: string;
   logo: string;
   details?: string;
 }
@@ -47,12 +48,15 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
 
   const getShowTypeStyle = (type: string) => {
     if (type.toLowerCase().includes('improv')) {
-      return 'bg-gradient-energy text-white';
+      return 'bg-gradient-improv text-white';
     }
     if (type.toLowerCase().includes('stand') || type.toLowerCase().includes('open mic')) {
-      return 'bg-gradient-fun text-white';
+      return 'bg-gradient-standup text-white';
     }
-    return 'bg-gradient-comedy text-foreground';
+    if (type.toLowerCase().includes('music') || type.toLowerCase().includes('concert')) {
+      return 'bg-gradient-music text-white';
+    }
+    return 'bg-gradient-fun text-white';
   };
 
   return (
@@ -93,8 +97,13 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
                     {show.type}
                   </span>
                   {show.group && (
-                    <span className="font-mono text-xs bg-foreground/10 px-2 py-1 rounded-full">
+                    <span className="font-mono font-light text-xs bg-foreground/10 px-2 py-1 rounded-full">
                       with {show.group}
+                    </span>
+                  )}
+                  {show.character && (
+                    <span className="font-mono font-light text-xs bg-foreground/10 px-2 py-1 rounded-full">
+                      as {show.character}
                     </span>
                   )}
                 </div>
@@ -103,10 +112,10 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
                   <span className="font-normal mx-1">at</span>
                   <span>{show.time}</span>
                 </div>
-                <div className="font-sans font-light flex items-center gap-2 text-sm">
+                <div className="font-mono flex items-center gap-2 text-sm">
                   <span>{show.venue}</span>
                   <span>•</span>
-                  <span>{show.city}</span>
+                  <span className="font-light">{show.city}</span>
                 </div>
               </div>
 
@@ -123,9 +132,9 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
             </div>
           </div>
         ))}
-        <div className="text-center">
-          <div className="flex justify-center space-x-4 text-xs text-foreground/70">
-            <span>@apchapcomedy</span>
+        <div className="text-center pt-2">
+          <div className="font-sans flex justify-center space-x-4 text-xs text-foreground/70">
+            <span>@ashlynchaps</span>
           </div>
         </div>
       </div>

@@ -54,6 +54,17 @@ export default {
           red: "hsl(var(--comedy-red))",
           purple: "hsl(var(--comedy-purple))",
           blue: "hsl(var(--comedy-blue))",
+          green: "hsl(var(--comedy-green))",
+        },
+        // Gruvbox / user-provided palette aliases
+        gruvbox: {
+          light: "hsl(var(--background))",
+          dark: "hsl(var(--foreground))",
+          yellow: "hsl(var(--comedy-yellow))",
+          orange: "hsl(var(--comedy-orange))",
+          red: "hsl(var(--comedy-red))",
+          purple: "hsl(var(--comedy-purple))",
+          blue: "hsl(var(--comedy-blue))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -72,9 +83,13 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'gradient-comedy': 'var(--gradient-comedy)',
+        'gradient-bg': 'var(--gradient-bg)',
         'gradient-fun': 'var(--gradient-fun)',
-        'gradient-energy': 'var(--gradient-energy)',
+        'gradient-improv': 'var(--gradient-improv)',
+        'gradient-standup': 'var(--gradient-standup)',
+        'gradient-music': 'var(--gradient-music)',
+        'gradient-nature': 'var(--gradient-nature)',
+        'gradient-ocean': 'var(--gradient-ocean)',
       },
       boxShadow: {
         'comedy': 'var(--shadow-comedy)',
@@ -85,8 +100,11 @@ export default {
         'smooth': 'var(--transition-smooth)',
       },
       fontFamily: {
-        'comic': ['Comic Neue', 'cursive'],
-        'bold': ['Fredoka One', 'cursive'],
+        'comic': ['"Comic Neue"', 'cursive', 'system-ui', 'sans-serif'],
+        'bold': ['"Fredoka One"', 'cursive', 'system-ui', 'sans-serif'],
+        'caveat': ['Caveat', 'cursive', 'system-ui', 'sans-serif'],
+        'mono': ['"Roboto Mono"', 'Consolas', 'Monaco', 'monospace'],
+        'sans': ['"Merriweather Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {

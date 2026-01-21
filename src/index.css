@@ -1,119 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Dark mode using provided palette (e.g., #282828 etc.) */
---background: 210 4% 16%;
-/* #282828-ish */
---foreground: 48 90% 96%;
-/* #fbf1c7 */
 
---card: 210 4% 16%;
-/* dark background */
---card-foreground: 48 90% 96%;
-
---popover: 210 4% 16%;
---popover-foreground: 48 90% 96%;
-
---primary: 43 92% 56%;
-/* #fabd2f */
---primary-foreground: 210 4% 16%;
-
---secondary: 20 6% 32%;
-/* #504945 */
---secondary-foreground: 48 90% 96%;
-
---muted: 20 6% 32%;
-/* #504945 */
---muted-foreground: 38 10% 66%;
-/* #a89984 */
-
---accent: 22 86% 55%;
---accent-foreground: 48 90% 96%;
-
---destructive: 2 72% 45%;
---destructive-foreground: 48 90% 96%;
-
---border: 20 6% 32%;
---input: 20 6% 32%;
---ring: 43 92% 56%;
-
---sidebar-background: 210 4% 10%;
---sidebar-foreground: 210 4% 96%;
---sidebar-primary: 224 76% 48%;
---sidebar-primary-foreground: 0 0% 100%;
---sidebar-accent: 210 4% 16%;
---sidebar-accent-foreground: 210 4% 96%;
---sidebar-border: 210 4% 16%;
---sidebar-ring: 217.2 91.2% 59.8%;
-
-/* Custom gradients for comedy flyer using new palette */
---gradient-comedy: linear-gradient(135deg, hsl(43 92% 56%), hsl(22 86% 55%));
---gradient-fun: linear-gradient(120deg, hsl(327 30% 68%), hsl(200 36% 43%));
---gradient-energy: linear-gradient(45deg, hsl(2 72% 45%), hsl(22 86% 55%));
-
-/* Shadows */
---shadow-comedy: 0 10px 30px -5px hsl(43 92% 56% / 0.25);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Comedy Flyer Design System - Updated palette from user-provided hex list
-       All colors stored as HSL values for Tailwind compatibility.
-    */
-
 @layer base {
   :root {
-    /* Light mode (mapped to provided palette) */
-    --background: 48 90% 96%;
-    /* approx #fbf1c7 */
-    --foreground: 14 5% 23%;
-    /* approx #3c3836 */
+    /* Light mode (Gruvbox light palette) */
+    --background: 48 87% 94%;
+    /* #fbf1c7 */
+    --foreground: 24 6% 24%;
+    /* #3c3836 */
 
-    /* Brand / comedy colors */
-    --comedy-yellow: 43 92% 56%;
+    /* Brand / comedy colors from Gruvbox palette */
+    --comedy-yellow: 45 100% 57%;
     /* #fabd2f */
-    --comedy-orange: 22 86% 55%;
+    --comedy-orange: 26 88% 54%;
     /* #fe8019 */
-    --comedy-red: 2 72% 45%;
+    --comedy-red: 4 89% 45%;
     /* #cc241d */
-    --comedy-purple: 327 30% 68%;
+    --comedy-purple: 333 30% 68%;
     /* #d3869b */
-    --comedy-blue: 200 36% 43%;
+    --comedy-blue: 205 65% 41%;
     /* #458588 */
+    --comedy-green: 60 71% 35%
+      /* #90971a */
 
-    /* Card & popover */
-    --card: 48 90% 96%;
-    --card-foreground: 14 5% 23%;
-    --popover: 48 90% 96%;
-    --popover-foreground: 14 5% 23%;
+      /* Card & popover */
+      --card: 48 87% 94%;
+    --card-foreground: 24 6% 24%;
+    --popover: 48 87% 94%;
+    --popover-foreground: 24 6% 24%;
 
-    --primary: 43 92% 56%;
-    --primary-foreground: 14 5% 23%;
+    --primary: 45 100% 57%;
+    --primary-foreground: 24 6% 24%;
 
-    --secondary: 20 6% 32%;
-    --secondary-foreground: 48 90% 96%;
+    --secondary: 20 15% 30%;
+    /* #504945 */
+    --secondary-foreground: 48 87% 94%;
 
-    --muted: 42 19% 81%;
-    --muted-foreground: 25 10% 46%;
+    --muted: 42 28% 86%;
+    /* #ebdbb2 */
+    --muted-foreground: 25 13% 48%;
+    /* #7c6f64 */
 
-    --accent: 22 86% 55%;
-    --accent-foreground: 48 90% 96%;
+    --accent: 26 88% 54%;
+    --accent-foreground: 48 87% 94%;
 
-    --destructive: 2 72% 45%;
-    --destructive-foreground: 48 90% 96%;
+    --destructive: 4 89% 45%;
+    --destructive-foreground: 48 87% 94%;
 
-    --border: 42 19% 81%;
-    --input: 42 19% 81%;
-    --ring: 43 92% 56%;
+    --border: 42 28% 86%;
+    /* #ebdbb2 */
+    --input: 42 28% 86%;
+    --ring: 45 100% 57%;
 
     /* Gradients */
-    --gradient-comedy: linear-gradient(135deg, hsl(43 92% 56%), hsl(22 86% 55%));
-    --gradient-fun: linear-gradient(120deg, hsl(327 30% 68%), hsl(200 36% 43%));
-    --gradient-energy: linear-gradient(45deg, hsl(2 72% 45%), hsl(22 86% 55%));
+    --gradient-bg: linear-gradient(135deg, hsl(43 92% 56%), hsl(22 86% 55%));
+    --gradient-fun: linear-gradient(135deg, hsl(200 36% 43%) 20%, hsl(327 30% 60%));
+    --gradient-music: linear-gradient(45deg, hsl(327 30% 45%) 50%, hsl(2 72% 55%));
+    --gradient-improv: linear-gradient(45deg, hsl(2 72% 45%) 30%, hsl(22 86% 55%));
+    --gradient-standup: linear-gradient(135deg, hsl(22 86% 45%) 40%, hsl(43 92% 56%));
+    --gradient-ocean: linear-gradient(45deg, hsl(158 61% 48%), hsl(200 36% 45%) 50%);
 
     /* Shadows */
-    --shadow-comedy: 0 10px 30px -5px hsl(43 92% 56% / 0.25);
-    --shadow-fun: 0 8px 25px -5px hsl(327 30% 68% / 0.2);
+    --shadow-comedy: 0 10px 30px -5px hsl(45 100% 57% / 0.25);
+    --shadow-fun: 0 8px 25px -5px hsl(333 30% 68% / 0.2);
 
     /* Animation timings */
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -133,36 +87,44 @@
   }
 
   .dark {
-    /* Dark mode (mapped to provided palette) */
-    --background: 210 4% 16%;
-    /* approx #282828 */
-    --foreground: 48 90% 96%;
-    /* approx #fbf1c7 */
+    /* Dark mode (Gruvbox dark palette) */
+    --background: 30 9% 16%;
+    /* #282828 */
+    --foreground: 48 87% 94%;
+    /* #fbf1c7 */
 
-    --card: 210 4% 16%;
-    --card-foreground: 48 90% 96%;
+    --card: 30 9% 16%;
+    --card-foreground: 48 87% 94%;
 
-    --popover: 210 4% 16%;
-    --popover-foreground: 48 90% 96%;
+    --popover: 30 9% 16%;
+    --popover-foreground: 48 87% 94%;
 
-    --primary: 43 92% 56%;
-    --primary-foreground: 210 4% 16%;
+    --primary: 45 100% 57%;
+    /* #fabd2f */
+    --primary-foreground: 30 9% 16%;
 
-    --secondary: 20 6% 32%;
-    --secondary-foreground: 48 90% 96%;
+    --secondary: 20 15% 30%;
+    /* #504945 */
+    --secondary-foreground: 48 87% 94%;
 
-    --muted: 20 6% 32%;
-    --muted-foreground: 38 10% 66%;
+    --muted: 20 15% 30%;
+    /* #504945 */
+    --muted-foreground: 38 13% 65%;
+    /* #a89984 */
 
-    --accent: 22 86% 55%;
-    --accent-foreground: 48 90% 96%;
+    --accent: 26 88% 54%;
+    /* #fe8019 */
+    --accent-foreground: 48 87% 94%;
 
-    --destructive: 2 72% 45%;
-    --destructive-foreground: 48 90% 96%;
+    --destructive: 4 89% 45%;
+    /* #cc241d */
+    --destructive-foreground: 48 87% 94%;
 
-    --border: 20 6% 32%;
-    --input: 20 6% 32%;
-    --ring: 43 92% 56%;
+    --border: 20 15% 30%;
+    /* #504945 */
+    --input: 20 15% 30%;
+    --ring: 45 100% 57%;
+    /* #fabd2f */
 
     --sidebar-background: 210 4% 10%;
     --sidebar-foreground: 210 4% 96%;
