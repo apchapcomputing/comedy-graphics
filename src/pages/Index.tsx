@@ -7,9 +7,10 @@ const Index = () => {
   const shows: Show[] = data.shows;
 
   return (
-    <div className="min-h-screen bg-gradient-bg shadow-comedy flex items-center justify-center p-4">
-      <div className="text-center space-y-8">
+    <div className="min-h-screen bg-gradient-bg shadow-comedy flex items-center justify-center p-2 sm:p-4">
+      <div className="text-center space-y-8 w-full max-w-[500px]">
         <ComedyFlyer shows={shows} month={data.month} year={data.year} />
+        {/* <DownloadButton targetId="comedy-flyer" filename="comedy-flyer" /> */}
       </div>
     </div>
   );
