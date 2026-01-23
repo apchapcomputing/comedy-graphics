@@ -34,7 +34,6 @@
             "type": "Giant Robot Fight Club",
             "day": "Saturday",
             "date": "February 14",
-            "time": "7 PM",
             "venue": "Common Market",
             "city": "Durham, NC",
             "character": "Blue Bandit"
@@ -47,6 +46,14 @@
             "venue": "Mettlesome",
             "city": "Durham, NC",
             "group": "8 Days a Week!"
+        },
+        {
+            "type": "Music",
+            "day": "Sunday",
+            "date": "March 15",
+            "venue": "Kings",
+            "city": "Raleigh, NC",
+            "group": "Empire Records"
         }
     ]
 }

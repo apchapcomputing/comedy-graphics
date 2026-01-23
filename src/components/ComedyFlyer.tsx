@@ -15,7 +15,7 @@ export interface Show {
   city: string;
   group?: string;
   character?: string;
-  logo: string;
+  logo?: string;
   details?: string;
 }
 
@@ -23,9 +23,10 @@ interface ComedyFlyerProps {
   shows: Show[];
   month: string;
   year: string;
+  isFiltered?: boolean;
 }
 
-const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
+const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProps) => {
   const getVenueLogo = (venue: string) => {
     const venueLower = venue.toLowerCase().trim();
 
@@ -71,7 +72,7 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
           ASHLYN ON STAGE
         </h1>
         <h2 className="font-caveat text-xl sm:text-2xl text-foreground font-bold">
-          {month} {year}
+          {isFiltered ? `${month} ${year}` : 'Upcoming Shows'}
         </h2>
         <div className="w-16 sm:w-20 h-1 bg-comedy-red mx-auto mt-2 rounded-full"></div>
       </div>
@@ -109,7 +110,7 @@ const ComedyFlyer = ({ shows, month, year }: ComedyFlyerProps) => {
                 </div>
                 <div className="font-comic text-base sm:text-lg font-bold flex items-baseline flex-wrap">
                   <span>{show.day}, {show.date}</span>
-                  <span className="font-normal mx-1">at</span>
+                  {show.time && <span className="font-normal mx-1">at</span>}
                   <span>{show.time}</span>
                 </div>
                 <div className="font-mono flex items-center gap-1 sm:gap-2 text-xs sm:text-sm flex-wrap">
