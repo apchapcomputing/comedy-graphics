@@ -17,8 +17,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-bg shadow-comedy flex items-center justify-center p-2 sm:p-4">
-      {/* Toggle Filter in Top Right */}
-      <div className="fixed top-4 right-4 z-20 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+      {/* Toggle Filter in Top Right - Hidden on mobile */}
+      <div className="hidden md:block fixed top-4 right-4 z-20 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
         <div className="flex items-center space-x-2">
           <Switch
             id="month-filter"
