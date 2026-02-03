@@ -10,7 +10,7 @@ export interface Show {
   type: string;
   day: string;
   date: string;
-  time: string;
+  time?: string;
   venue: string;
   city: string;
   group?: string;

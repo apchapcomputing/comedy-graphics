@@ -4,25 +4,6 @@
     "shows": [
         {
             "type": "Improv",
-            "day": "Saturday",
-            "date": "January 31",
-            "time": "7:30 PM",
-            "venue": "Phi Beta Kappa Hall",
-            "city": "Williamsburg, VA",
-            "group": "Last Word Academy",
-            "details": "Last Word Comedy Festival"
-        },
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "February 5",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Nerd Lens"
-        },
-        {
-            "type": "Improv",
             "day": "Friday",
             "date": "February 6",
             "time": "7 PM",
@@ -53,7 +34,7 @@
             "date": "March 15",
             "venue": "Kings",
             "city": "Raleigh, NC",
-            "group": "Empire Records"
+            "group": "GrrrlBands"
         }
     ]
 }
