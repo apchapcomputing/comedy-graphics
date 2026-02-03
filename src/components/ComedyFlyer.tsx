@@ -3,8 +3,10 @@ import alchemyLogo from "@/assets/alchemy-logo.png";
 import comedyWorxLogo from "@/assets/comedyworx-logo.png";
 import durtyBullLogo from "@/assets/durty-bull-logo.png";
 import mettlesomeLogo from "@/assets/mettlesome-logo.png"
-import defaultLogo from "@/assets/default-logo.png";
 import lastWordLogo from "@/assets/last-word-logo.png";
+import grfcLogo from "@/assets/robot.png";
+import kingsLogo from "@/assets/kings.png";
+import defaultLogo from "@/assets/default-logo.png";
 
 export interface Show {
   type: string;
@@ -27,8 +29,15 @@ interface ComedyFlyerProps {
 }
 
 const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProps) => {
-  const getVenueLogo = (venue: string) => {
-    const venueLower = venue.toLowerCase().trim();
+  const getVenueLogo = (show: Show) => {
+    const typeLower = show.type.toLowerCase().trim();
+
+    // Check for Giant Robot Fight Club first
+    if (typeLower.includes('giant robot fight club')) {
+      return grfcLogo;
+    }
+
+    const venueLower = show.venue.toLowerCase().trim();
 
     switch (true) {
       case venueLower.includes('alchemy'):
@@ -41,6 +50,8 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
         return mettlesomeLogo;
       case venueLower.includes('phi'):
         return lastWordLogo;
+      case venueLower.includes('kings'):
+        return kingsLogo;
       default:
         return defaultLogo;
     }
@@ -114,19 +125,25 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
                   <span>{show.time}</span>
                 </div>
                 <div className="font-mono flex items-center gap-1 sm:gap-2 text-xs sm:text-sm flex-wrap">
-                  <span className="truncate">{show.venue}</span>
-                  <span>•</span>
-                  <span className="font-light">{show.city}</span>
+                  {show.venue && (
+                    <span className="truncate">{show.venue}</span>
+                  )}
+                  {show.venue && (
+                    <span>•</span>
+                  )}
+                  {show.city && (
+                    <span className="font-light">{show.city}</span>
+                  )}
                 </div>
               </div>
 
               {/* Venue Logo */}
-              {getVenueLogo(show.venue) && (
-                <div className="w-14 h-10 sm:w-20 sm:h-14 bg-white rounded-full p-1 flex items-center justify-center ml-2 sm:ml-3 overflow-hidden flex-shrink-0">
+              {getVenueLogo(show) && (
+                <div className={`w-14 h-10 sm:w-20 sm:h-14 bg-white rounded-full flex items-center justify-center ml-2 sm:ml-3 overflow-hidden flex-shrink-0 ${show.type.toLowerCase().includes('giant robot fight club') ? '' : 'p-1'}`}>
                   <img
-                    src={getVenueLogo(show.venue)}
+                    src={getVenueLogo(show)}
                     alt={`${show.venue} logo`}
-                    className="w-full h-full object-contain"
+                    className={`w-full h-full ${show.type.toLowerCase().includes('giant robot fight club') ? 'object-cover' : 'object-contain'}`}
                   />
                 </div>
               )}
