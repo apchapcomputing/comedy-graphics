@@ -33,6 +33,15 @@
             "venue": "Kings",
             "city": "Raleigh, NC",
             "group": "GrrrlBands"
+        },
+        {
+        	"type": "Improv",
+            "day": "Wednesday",
+            "date": "March 25",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Mango! Mango!",
+            "details": "Dogwood Comedy Festival"
         }
     ]
 }
