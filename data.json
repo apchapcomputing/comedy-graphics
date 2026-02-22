@@ -27,12 +27,30 @@
             "group": "8 Days a Week!"
         },
         {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "March 13",
+            "time": "7:30 PM",
+            "venue": "My Muses",
+            "city": "Carrboro, NC",
+            "group": "Mango! Mango!"
+        },
+        {
             "type": "Music",
             "day": "Sunday",
             "date": "March 15",
             "venue": "Kings",
             "city": "Raleigh, NC",
             "group": "GrrrlBands"
+        },
+        {
+            "type": "Improv",
+            "day": "Thursday",
+            "date": "March 19",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens"
         },
         {
         	"type": "Improv",
@@ -42,6 +60,24 @@
             "city": "Raleigh, NC",
             "group": "Mango! Mango!",
             "details": "Dogwood Comedy Festival"
+        },
+        {
+            "type": "Improv",
+            "day": "Thursday",
+            "date": "April 2",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "April 3",
+            "time": "7:30 PM",
+            "venue": "My Muses",
+            "city": "Carrboro, NC",
+            "group": "Mango! Mango!"
         }
     ]
 }
