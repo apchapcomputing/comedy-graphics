@@ -1,11 +1,12 @@
 import { Card } from "@/components/ui/card";
 import alchemyLogo from "@/assets/alchemy-logo.png";
+import blackSheepLogo from "@/assets/black-sheep-logo.png"
 import comedyWorxLogo from "@/assets/comedyworx-logo.png";
 import durtyBullLogo from "@/assets/durty-bull-logo.png";
-import mettlesomeLogo from "@/assets/mettlesome-logo.png"
-import lastWordLogo from "@/assets/last-word-logo.png";
 import grfcLogo from "@/assets/robot.png";
 import kingsLogo from "@/assets/kings.png";
+import lastWordLogo from "@/assets/last-word-logo.png";
+import mettlesomeLogo from "@/assets/mettlesome-logo.png"
 import defaultLogo from "@/assets/default-logo.png";
 
 export interface Show {
@@ -42,16 +43,18 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
     switch (true) {
       case venueLower.includes('alchemy'):
         return alchemyLogo;
+      case venueLower.includes('muses') || venueLower.includes('black sheep') || venueLower.includes('arts center'):
+        return blackSheepLogo;
       case venueLower.includes('comedyworx'):
         return comedyWorxLogo;
       case venueLower.includes('durty bull') || venueLower.includes('durty-bull'):
         return durtyBullLogo;
+      case venueLower.includes('kings'):
+        return kingsLogo;
       case venueLower.includes('mettlesome'):
         return mettlesomeLogo;
       case venueLower.includes('phi'):
         return lastWordLogo;
-      case venueLower.includes('kings'):
-        return kingsLogo;
       default:
         return defaultLogo;
     }

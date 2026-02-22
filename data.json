@@ -15,6 +15,7 @@
             "type": "Music",
             "day": "Sunday",
             "date": "March 15",
+            "time": "7 PM",
             "venue": "Kings",
             "city": "Raleigh, NC",
             "group": "GrrrlBands"
@@ -29,7 +30,7 @@
             "group": "Nerd Lens"
         },
         {
-        	"type": "Improv",
+            "type": "Improv",
             "day": "Wednesday",
             "date": "March 25",
             "time": "7 PM",
