@@ -1,31 +1,7 @@
 {
-    "month": "February",
+    "month": "March",
     "year": "2026",
     "shows": [
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "February 6",
-            "time": "7 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "8 Days a Week!"
-        },
-        {
-            "type": "Giant Robot Fight Club",
-            "day": "Saturday",
-            "date": "February 14",
-            "character": "Blue Bandit"
-        },
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "February 20",
-            "time": "7 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "8 Days a Week!"
-        },
         {
             "type": "Improv",
             "day": "Friday",
