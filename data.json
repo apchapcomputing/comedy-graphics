@@ -56,6 +56,14 @@
             "venue": "My Muses",
             "city": "Carrboro, NC",
             "group": "Mango! Mango!"
+        },
+        {
+            "day": "Thursday",
+            "date": "April 16",
+            "time": "8:30 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "MadLab"
         }
     ]
 }
