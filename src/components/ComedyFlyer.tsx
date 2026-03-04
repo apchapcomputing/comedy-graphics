@@ -43,7 +43,7 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
     switch (true) {
       case venueLower.includes('alchemy'):
         return alchemyLogo;
-      case venueLower.includes('muses') || venueLower.includes('black sheep') || venueLower.includes('arts center'):
+      case venueLower.includes('muses') || venueLower.includes('black sheep') || venueLower.includes('artscenter'):
         return blackSheepLogo;
       case venueLower.includes('comedyworx'):
         return comedyWorxLogo;
