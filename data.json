@@ -30,6 +30,15 @@
             "group": "Nerd Lens"
         },
         {
+            "type": "Standup",
+            "day": "Sunday",
+            "date": "March 22",
+            "time": "7:30 PM",
+            "venue": "Arcana",
+            "city": "Durham, NC",
+            "details": "Queer Talent Show"
+        },
+        {
             "type": "Improv",
             "day": "Wednesday",
             "date": "March 25",
