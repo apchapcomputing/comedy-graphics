@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import arcanaLogo from "@/assets/arcana-logo.jpg"
 import alchemyLogo from "@/assets/alchemy-logo.png";
 import blackSheepLogo from "@/assets/black-sheep-logo.png"
 import comedyWorxLogo from "@/assets/comedyworx-logo.png";
@@ -43,6 +44,8 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
     switch (true) {
       case venueLower.includes('alchemy'):
         return alchemyLogo;
+      case venueLower.includes('arcana'):
+        return arcanaLogo;
       case venueLower.includes('muses') || venueLower.includes('black sheep') || venueLower.includes('artscenter'):
         return blackSheepLogo;
       case venueLower.includes('comedyworx'):
@@ -142,11 +145,11 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
 
               {/* Venue Logo */}
               {getVenueLogo(show) && (
-                <div className={`w-14 h-10 sm:w-20 sm:h-14 bg-white rounded-full flex items-center justify-center ml-2 sm:ml-3 overflow-hidden flex-shrink-0 ${show.type.toLowerCase().includes('giant robot fight club') ? '' : 'p-1'}`}>
+                <div className={`w-14 h-10 sm:w-20 sm:h-14 bg-white rounded-full flex items-center justify-center ml-2 sm:ml-3 overflow-hidden flex-shrink-0 ${show.type.toLowerCase().includes('giant robot fight club') || show.venue.toLowerCase().includes('arcana') ? '' : 'p-1'}`}>
                   <img
                     src={getVenueLogo(show)}
                     alt={`${show.venue} logo`}
-                    className={`w-full h-full ${show.type.toLowerCase().includes('giant robot fight club') ? 'object-cover' : 'object-contain'}`}
+                    className={`w-full h-full ${show.type.toLowerCase().includes('giant robot fight club') || show.venue.toLowerCase().includes('arcana') ? 'object-cover' : 'object-contain'}`}
                   />
                 </div>
               )}

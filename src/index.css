@@ -62,8 +62,9 @@
     --gradient-fun: linear-gradient(135deg, hsl(200 36% 43%) 20%, hsl(327 30% 60%));
     --gradient-music: linear-gradient(45deg, hsl(327 30% 45%) 50%, hsl(2 72% 55%));
     --gradient-improv: linear-gradient(45deg, hsl(2 72% 45%) 30%, hsl(22 86% 55%));
-    --gradient-standup: linear-gradient(135deg, hsl(22 86% 45%) 40%, hsl(43 92% 56%));
+    --gradient-standup: linear-gradient(135deg, hsl(22 86% 45%), hsl(43 92% 56%) 90%);
     --gradient-ocean: linear-gradient(45deg, hsl(158 61% 48%), hsl(200 36% 45%) 50%);
+    --gradient-nature: linear-gradient(135deg, hsl(158 61% 48%) 10%, hsl(43 92% 56%));
 
     /* Shadows */
     --shadow-comedy: 0 10px 30px -5px hsl(45 100% 57% / 0.25);
