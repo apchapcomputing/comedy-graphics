@@ -1,61 +1,15 @@
 {
-    "month": "March",
+    "month": "April",
     "year": "2026",
     "shows": [
         {
             "type": "Improv",
-            "day": "Friday",
-            "date": "March 13",
-            "time": "7:30 PM",
-            "venue": "The ArtsCenter",
-            "city": "Carrboro, NC",
-            "group": "Mango! Mango!"
-        },
-        {
-            "type": "Music",
-            "day": "Sunday",
-            "date": "March 15",
-            "time": "7 PM",
-            "venue": "Kings",
-            "city": "Raleigh, NC",
-            "group": "GrrrlBands"
-        },
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "March 19",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Nerd Lens"
-        },
-        {
-            "type": "Standup",
-            "day": "Sunday",
-            "date": "March 22",
-            "time": "7:30 PM",
-            "venue": "Arcana",
-            "city": "Durham, NC",
-            "details": "Queer Talent Show"
-        },
-        {
-            "type": "Improv",
-            "day": "Wednesday",
-            "date": "March 25",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Mango! Mango! & Nerd Lens",
-            "details": "Dogwood Comedy Festival"
-        },
-        {
-            "type": "Improv",
             "day": "Thursday",
             "date": "April 2",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Nerd Lens"
+            "time": "7:30 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Pluto the Planet"
         },
         {
             "type": "Improv",
@@ -67,6 +21,14 @@
             "group": "Mango! Mango!"
         },
         {
+            "type": "Standup",
+            "day": "Saturday",
+            "date": "April 4",
+            "time": "7 PM",
+            "venue": "Trackside Bottle Shop",
+            "city": "Mebane, NC"
+        },
+        {
             "type": "Improv",
             "day": "Thursday",
             "date": "April 16",
@@ -74,6 +36,15 @@
             "venue": "ComedyWorx",
             "city": "Raleigh, NC",
             "group": "MadLab"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "April 17",
+            "time": "7 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Pluto the Planet"
         }
     ]
 }

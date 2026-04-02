@@ -8,6 +8,7 @@ import grfcLogo from "@/assets/robot.png";
 import kingsLogo from "@/assets/kings.png";
 import lastWordLogo from "@/assets/last-word-logo.png";
 import mettlesomeLogo from "@/assets/mettlesome-logo.png"
+import tracksideLogo from "@/assets/trackside-logo.png";
 import defaultLogo from "@/assets/default-logo.png";
 
 export interface Show {
@@ -58,23 +59,25 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
         return mettlesomeLogo;
       case venueLower.includes('phi'):
         return lastWordLogo;
+      case venueLower.includes('trackside'):
+        return tracksideLogo;
       default:
         return defaultLogo;
     }
   };
 
 
-  const getShowTypeStyle = (type: string) => {
+  const getShowTypeGradient = (type: string): string => {
     if (type.toLowerCase().includes('improv')) {
-      return 'bg-gradient-improv text-white';
+      return 'linear-gradient(45deg, hsl(2 72% 45%) 30%, hsl(22 86% 55%))';
     }
     if (type.toLowerCase().includes('stand') || type.toLowerCase().includes('open mic')) {
-      return 'bg-gradient-standup text-white';
+      return 'linear-gradient(135deg, hsl(22 86% 45%) 40%, hsl(43 92% 56%))';
     }
     if (type.toLowerCase().includes('music') || type.toLowerCase().includes('concert')) {
-      return 'bg-gradient-music text-white';
+      return 'linear-gradient(45deg, hsl(327 30% 45%) 50%, hsl(2 72% 55%))';
     }
-    return 'bg-gradient-fun text-white';
+    return 'linear-gradient(135deg, hsl(200 36% 43%) 20%, hsl(327 30% 60%))';
   };
 
   return (
@@ -99,7 +102,8 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
         {shows.map((show, index) => (
           <div
             key={index}
-            className={`p-3 sm:p-4 rounded-lg ${getShowTypeStyle(show.type)}`}
+            className="p-3 sm:p-4 rounded-lg text-white"
+            style={{ backgroundImage: getShowTypeGradient(show.type) }}
           >
             <div className="flex items-center justify-between">
               <div className="flex-1 min-w-0">
@@ -115,12 +119,12 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
                     {show.type}
                   </span>
                   {show.group && (
-                    <span className="font-mono font-light text-[10px] sm:text-xs bg-foreground/10 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
+                    <span className="inline-flex items-center justify-center font-mono font-light text-[10px] sm:text-xs bg-foreground/10 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full leading-none">
                       with {show.group}
                     </span>
                   )}
                   {show.character && (
-                    <span className="font-mono font-light text-[10px] sm:text-xs bg-foreground/10 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
+                    <span className="inline-flex items-center justify-center font-mono font-light text-[10px] sm:text-xs bg-foreground/10 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full leading-none">
                       as {show.character}
                     </span>
                   )}
@@ -132,9 +136,9 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
                 </div>
                 <div className="font-mono flex items-center gap-1 sm:gap-2 text-xs sm:text-sm flex-wrap">
                   {show.venue && (
-                    <span className="truncate">{show.venue}</span>
+                    <span>{show.venue}</span>
                   )}
-                  {show.venue && (
+                  {show.venue && show.city && (
                     <span>•</span>
                   )}
                   {show.city && (
@@ -149,7 +153,7 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
                   <img
                     src={getVenueLogo(show)}
                     alt={`${show.venue} logo`}
-                    className={`w-full h-full ${show.type.toLowerCase().includes('giant robot fight club') || show.venue.toLowerCase().includes('arcana') ? 'object-cover' : 'object-contain'}`}
+                    className={`w-full h-full ${show.type.toLowerCase().includes('giant robot fight club') || show.venue.toLowerCase().includes('arcana') ? 'object-cover' : 'object-contain'} ${show.venue.toLowerCase().includes('trackside') ? 'invert' : ''}`}
                   />
                 </div>
               )}
