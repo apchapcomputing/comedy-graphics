@@ -45,6 +45,39 @@
             "venue": "Mettlesome",
             "city": "Durham, NC",
             "group": "Pluto the Planet"
+        },
+    	{
+            "type": "Improv",
+            "day": "Saturday",
+            "date": "May 9",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "details": "Improv 401 Class Showcase"
+        },
+        {
+            "type": "Improv",
+            "day": "Thursday",
+            "date": "May 14",
+            "time": "7:30 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Mango! Mango!"
+        },
+        {
+            "type": "Standup",
+            "day": "Wednesday",
+            "date": "May 20",
+            "venue": "Club Era",
+            "city": "Durham, NC"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "May 21",
+            "time": "7 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Nerd Lens"
         }
     ]
 }
