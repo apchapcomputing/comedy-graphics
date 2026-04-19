@@ -78,6 +78,15 @@
             "venue": "ComedyWorx",
             "city": "Raleigh, NC",
             "group": "Nerd Lens"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "June 19",
+            "time": "7:30 PM",
+            "venue": "My Muses",
+            "city": "Carrboro, NC",
+            "group": "Mango! Mango!"
         }
     ]
 }
