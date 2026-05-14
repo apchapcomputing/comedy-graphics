@@ -1,59 +1,7 @@
 {
-    "month": "April",
+    "month": "May",
     "year": "2026",
     "shows": [
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "April 2",
-            "time": "7:30 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Pluto the Planet"
-        },
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "April 3",
-            "time": "7:30 PM",
-            "venue": "The ArtsCenter",
-            "city": "Carrboro, NC",
-            "group": "Mango! Mango!"
-        },
-        {
-            "type": "Standup",
-            "day": "Saturday",
-            "date": "April 4",
-            "time": "7 PM",
-            "venue": "Trackside Bottle Shop",
-            "city": "Mebane, NC"
-        },
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "April 16",
-            "time": "8:30 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "MadLab"
-        },
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "April 17",
-            "time": "7 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Pluto the Planet"
-        },
-    	{
-            "type": "Improv",
-            "day": "Saturday",
-            "date": "May 9",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "details": "Improv 401 Class Showcase"
-        },
         {
             "type": "Improv",
             "day": "Thursday",
@@ -67,6 +15,7 @@
             "type": "Standup",
             "day": "Wednesday",
             "date": "May 20",
+            "time": "8 PM",
             "venue": "Club Era",
             "city": "Durham, NC"
         },
@@ -87,6 +36,15 @@
             "venue": "My Muses",
             "city": "Carrboro, NC",
             "group": "Mango! Mango!"
+        },
+        {
+            "type": "Standup",
+            "day": "Wednesday",
+            "date": "July 8",
+            "time": "7:30 PM",
+            "venue": "Goodnights",
+            "city": "Raleigh, NC",
+            "details": "NC's Funniest Person"
         }
     ]
 }

@@ -4,12 +4,14 @@ import alchemyLogo from "@/assets/alchemy-logo.png";
 import blackSheepLogo from "@/assets/black-sheep-logo.png"
 import comedyWorxLogo from "@/assets/comedyworx-logo.png";
 import durtyBullLogo from "@/assets/durty-bull-logo.png";
+import goodnightsLogo from "@/assets/goodnights-logo.jpg"
 import grfcLogo from "@/assets/robot.png";
 import kingsLogo from "@/assets/kings.png";
 import lastWordLogo from "@/assets/last-word-logo.png";
 import mettlesomeLogo from "@/assets/mettlesome-logo.png"
 import tracksideLogo from "@/assets/trackside-logo.png";
 import defaultLogo from "@/assets/default-logo.png";
+import defaultStandupLogo from "@/assets/standup-logo.png";
 
 export interface Show {
   type: string;
@@ -53,6 +55,8 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
         return comedyWorxLogo;
       case venueLower.includes('durty bull') || venueLower.includes('durty-bull'):
         return durtyBullLogo;
+      case venueLower.includes('goodnights'):
+        return goodnightsLogo;
       case venueLower.includes('kings'):
         return kingsLogo;
       case venueLower.includes('mettlesome'):
@@ -62,6 +66,9 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
       case venueLower.includes('trackside'):
         return tracksideLogo;
       default:
+        if (typeLower.includes('stand') || typeLower.includes('open mic')) {
+          return defaultStandupLogo;
+        }
         return defaultLogo;
     }
   };
