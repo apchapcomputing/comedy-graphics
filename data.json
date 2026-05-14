@@ -21,12 +21,21 @@
         },
         {
             "type": "Improv",
-            "day": "Friday",
+            "day": "Thursday",
             "date": "May 21",
             "time": "7 PM",
             "venue": "ComedyWorx",
             "city": "Raleigh, NC",
             "group": "Nerd Lens"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "June 12",
+            "time": "8 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Pluto the Planet"
         },
         {
             "type": "Improv",
