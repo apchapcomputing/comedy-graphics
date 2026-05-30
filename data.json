@@ -1,33 +1,7 @@
 {
-    "month": "May",
+    "month": "June",
     "year": "2026",
     "shows": [
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "May 14",
-            "time": "7:30 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Mango! Mango!"
-        },
-        {
-            "type": "Standup",
-            "day": "Wednesday",
-            "date": "May 20",
-            "time": "8 PM",
-            "venue": "Club Era",
-            "city": "Durham, NC"
-        },
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "May 21",
-            "time": "7 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Nerd Lens"
-        },
         {
             "type": "Improv",
             "day": "Friday",
@@ -41,10 +15,11 @@
             "type": "Improv",
             "day": "Friday",
             "date": "June 19",
-            "time": "7:30 PM",
-            "venue": "My Muses",
-            "city": "Carrboro, NC",
-            "group": "Mango! Mango!"
+            "time": "7 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Nerd Lenz",
+            "details": "KING SHIT ROUND 1"
         },
         {
             "type": "Standup",
@@ -53,7 +28,7 @@
             "time": "7:30 PM",
             "venue": "Goodnights",
             "city": "Raleigh, NC",
-            "details": "NC's Funniest Person"
+            "details": "NC's Funniest Person Round 1"
         }
     ]
 }

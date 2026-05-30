@@ -8,7 +8,9 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-flyer": "npx tsx scripts/generate-flyer.tsx",
+    "generate-flyer:month": "npx tsx scripts/generate-flyer.tsx --month"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -39,6 +41,7 @@
     "@radix-ui/react-toggle": "^1.1.9",
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
+    "@resvg/resvg-js": "^2.6.2",
     "@tanstack/react-query": "^5.83.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -56,6 +59,7 @@
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",
     "recharts": "^2.15.4",
+    "satori": "^0.26.0",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
@@ -64,6 +68,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+    "@fontsource/caveat": "^5.2.8",
+    "@fontsource/comic-neue": "^5.2.7",
+    "@fontsource/fredoka-one": "^5.2.5",
+    "@fontsource/merriweather-sans": "^5.2.7",
+    "@fontsource/roboto-mono": "^5.2.9",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.16.5",
     "@types/react": "^18.3.23",
