@@ -1,26 +1,7 @@
 {
-    "month": "June",
+    "month": "July",
     "year": "2026",
     "shows": [
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "June 12",
-            "time": "8 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Pluto the Planet"
-        },
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "June 19",
-            "time": "7 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Nerd Lenz",
-            "details": "KING SHIT ROUND 1"
-        },
         {
             "type": "Standup",
             "day": "Wednesday",
@@ -29,6 +10,16 @@
             "venue": "Goodnights",
             "city": "Raleigh, NC",
             "details": "NC's Funniest Person Round 1"
+        },
+        {
+            "type": "Improv",
+            "day": "Saturday",
+            "date": "July 11",
+            "time": "8 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Mango! Mango!",
+            "details": "KING SHIT ROUND 1"
         }
     ]
 }
