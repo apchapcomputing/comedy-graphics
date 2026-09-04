@@ -1,26 +1,51 @@
 {
-    "month": "August",
+    "month": "September",
     "year": "2026",
     "shows": [
         {
             "type": "Improv",
-            "day": "Saturday",
-            "date": "August 8",
-            "time": "8 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Nerd Lenz",
-            "details": "KING SHIT ROUND 2"
+            "day": "Friday",
+            "date": "September 4",
+            "time": "7 PM",
+            "venue": "The ArtsCenter",
+            "city": "Carrboro, NC",
+            "group": "Mango! Mango!"
         },
         {
             "type": "Improv",
             "day": "Saturday",
-            "date": "August 15",
-            "time": "7 PM",
+            "date": "September 5",
+            "time": "9 PM",
+            "venue": "ComedyWorx",
+            "city": "Raleigh, NC",
+            "group": "Mango! Mango! & Nerd Lenz"
+        },
+        {
+            "type": "Improv",
+            "day": "Thursday",
+            "date": "September 10",
+            "time": "7:30 PM",
             "venue": "Mettlesome",
             "city": "Durham, NC",
-            "group": "Mango! Mango!",
-            "details": "KING SHIT ROUND 2"
+            "group": "Mango! Mango!"
+        },
+        {
+            "type": "Improv",
+            "day": "Friday",
+            "date": "September 18",
+            "time": "7 PM",
+            "venue": "My Muses Card Shop",
+            "city": "Carrboro, NC",
+            "group": "Mango! Mango!"
+        },
+        {
+            "type": "Improv",
+            "day": "Saturday",
+            "date": "October 10",
+            "time": "3 PM",
+            "venue": "The Historic Grove Theater",
+            "city": "Oak Ridge, TN",
+            "details": "Secret City Comedy Festival"
         },
         {
             "type": "Standup",
