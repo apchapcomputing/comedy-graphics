@@ -1,25 +1,34 @@
 {
-    "month": "July",
+    "month": "August",
     "year": "2026",
     "shows": [
         {
-            "type": "Standup",
-            "day": "Wednesday",
-            "date": "July 8",
-            "time": "7:30 PM",
-            "venue": "Goodnights",
-            "city": "Raleigh, NC",
-            "details": "NC's Funniest Person Round 1"
+            "type": "Improv",
+            "day": "Saturday",
+            "date": "August 8",
+            "time": "8 PM",
+            "venue": "Mettlesome",
+            "city": "Durham, NC",
+            "group": "Nerd Lenz",
+            "details": "KING SHIT ROUND 2"
         },
         {
             "type": "Improv",
             "day": "Saturday",
-            "date": "July 11",
-            "time": "8 PM",
+            "date": "August 15",
+            "time": "7 PM",
             "venue": "Mettlesome",
             "city": "Durham, NC",
             "group": "Mango! Mango!",
-            "details": "KING SHIT ROUND 1"
+            "details": "KING SHIT ROUND 2"
+        },
+        {
+            "type": "Standup",
+            "day": "Saturday",
+            "date": "October 17",
+            "venue": "Willow Coffee House",
+            "city": "Raleigh, NC",
+            "details": "Lava Lamp Comedy"
         }
     ]
 }
