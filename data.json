@@ -1,49 +1,22 @@
 {
-    "month": "September",
+    "month": "October",
     "year": "2026",
     "shows": [
         {
             "type": "Improv",
-            "day": "Friday",
-            "date": "September 4",
-            "time": "7 PM",
-            "venue": "The ArtsCenter",
-            "city": "Carrboro, NC",
-            "group": "Mango! Mango!"
-        },
-        {
-            "type": "Improv",
             "day": "Saturday",
-            "date": "September 5",
-            "time": "9 PM",
-            "venue": "ComedyWorx",
-            "city": "Raleigh, NC",
-            "group": "Mango! Mango! & Nerd Lenz"
-        },
-        {
-            "type": "Improv",
-            "day": "Thursday",
-            "date": "September 10",
-            "time": "7:30 PM",
-            "venue": "Mettlesome",
-            "city": "Durham, NC",
-            "group": "Mango! Mango!"
-        },
-        {
-            "type": "Improv",
-            "day": "Friday",
-            "date": "September 18",
-            "time": "7 PM",
-            "venue": "My Muses Card Shop",
-            "city": "Carrboro, NC",
-            "group": "Mango! Mango!"
+            "date": "October 10",
+            "time": "3:15 PM",
+            "venue": "Historic Grove Theater",
+            "city": "Oak Ridge, TN",
+            "details": "Secret City Comedy Festival"
         },
         {
             "type": "Improv",
             "day": "Saturday",
             "date": "October 10",
-            "time": "3 PM",
-            "venue": "The Historic Grove Theater",
+            "time": "4:30 PM",
+            "venue": "Oak Ridge Public Library",
             "city": "Oak Ridge, TN",
             "details": "Secret City Comedy Festival"
         },
@@ -51,9 +24,27 @@
             "type": "Standup",
             "day": "Saturday",
             "date": "October 17",
-            "venue": "Willow Coffee House",
+            "venue": "Willow House Coffee",
             "city": "Raleigh, NC",
             "details": "Lava Lamp Comedy"
+        },
+        {
+            "type": "Music",
+            "day": "Wednesday",
+            "date": "October 21",
+            "time": "7:30 PM",
+            "venue": "Sharp 9 Gallery",
+            "city": "Durham, NC"
+        },
+        {
+            "type": "Music",
+            "day": "Thursday",
+            "date": "October 29",
+            "time": "7 PM",
+            "venue": "Local 506",
+            "city": "Chapel Hill, NC",
+            "group": "GrrrlBands",
+            "details": "Halloween Showcase"
         }
     ]
 }

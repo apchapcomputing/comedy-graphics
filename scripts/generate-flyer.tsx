@@ -73,10 +73,18 @@ const fonts = [
 // ---------------------------------------------------------------------------
 const ASSETS_DIR = join(process.cwd(), "src/assets");
 
-function logoDataUri(filename: string, mime = "image/png"): string {
+function sniffMime(buf: Buffer): string {
+  if (buf.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))) return "image/png";
+  if (buf[0] === 0xff && buf[1] === 0xd8) return "image/jpeg";
+  if (buf.subarray(4, 12).toString("ascii") === "ftypavif") return "image/avif";
+  return "application/octet-stream";
+}
+
+// Extensions can lie (e.g. a JPEG named .png), so detect the type from the bytes.
+function logoDataUri(filename: string): string {
   try {
     const buf = readFileSync(join(ASSETS_DIR, filename));
-    return `data:${mime};base64,${buf.toString("base64")}`;
+    return `data:${sniffMime(buf)};base64,${buf.toString("base64")}`;
   } catch {
     return "";
   }
@@ -84,21 +92,25 @@ function logoDataUri(filename: string, mime = "image/png"): string {
 
 const LOGOS: Record<string, { uri: string; cover?: boolean; invert?: boolean }> = {
   alchemy: { uri: logoDataUri("alchemy-logo.png") },
-  arcana: { uri: logoDataUri("arcana-logo.jpg", "image/jpeg"), cover: true },
+  arcana: { uri: logoDataUri("arcana-logo.jpg"), cover: true },
   muses: { uri: logoDataUri("black-sheep-logo.png") },
   "black sheep": { uri: logoDataUri("black-sheep-logo.png") },
   artscenter: { uri: logoDataUri("black-sheep-logo.png") },
   comedyworx: { uri: logoDataUri("comedyworx-logo.png") },
   "durty bull": { uri: logoDataUri("durty-bull-logo.png") },
   "durty-bull": { uri: logoDataUri("durty-bull-logo.png") },
-  goodnights: { uri: logoDataUri("goodnights-logo.jpg", "image/jpeg") },
+  goodnights: { uri: logoDataUri("goodnights-logo.jpg") },
   kings: { uri: logoDataUri("kings.png") },
+  "local 506": { uri: logoDataUri("local-506-logo.jpg"), cover: true },
+  willow: { uri: logoDataUri("lava-lamp-logo.jpg"), cover: true, invert: true },
   mettlesome: { uri: logoDataUri("mettlesome-logo.png") },
   phi: { uri: logoDataUri("last-word-logo.png") },
   trackside: { uri: logoDataUri("trackside-logo.png"), invert: true },
 };
 
 const GRFC_LOGO = logoDataUri("robot.png");
+const SECRET_CITY_LOGO = logoDataUri("secret-city-festival-logo.png");
+const MUSIC_LOGO = logoDataUri("guitar-logo.png");
 const STANDUP_LOGO = logoDataUri("standup-logo.png");
 const DEFAULT_LOGO = logoDataUri("default-logo.png");
 
@@ -111,12 +123,14 @@ function getLogoInfo(show: Show): { uri: string; cover?: boolean; invert?: boole
   if (show.type.toLowerCase().includes("giant robot fight club")) {
     return { uri: GRFC_LOGO, cover: true };
   }
+  if (show.details?.includes("Secret City")) return { uri: SECRET_CITY_LOGO };
   const vl = show.venue.toLowerCase().trim();
   for (const [key, val] of Object.entries(LOGOS)) {
     if (vl.includes(key)) return val;
   }
   const tl = show.type.toLowerCase();
   if (tl.includes("stand") || tl.includes("open mic")) return { uri: STANDUP_LOGO };
+  if (tl.includes("music")) return { uri: MUSIC_LOGO };
   return { uri: DEFAULT_LOGO };
 }
 
@@ -324,8 +338,8 @@ const flyer = (
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: 56,
-                    height: 44,
+                    width: 80,
+                    height: 56,
                     backgroundColor: "white",
                     borderRadius: 99,
                     marginLeft: 12,

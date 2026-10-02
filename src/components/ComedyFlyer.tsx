@@ -8,10 +8,21 @@ import goodnightsLogo from "@/assets/goodnights-logo.jpg"
 import grfcLogo from "@/assets/robot.png";
 import kingsLogo from "@/assets/kings.png";
 import lastWordLogo from "@/assets/last-word-logo.png";
+import lavaLampLogo from "@/assets/lava-lamp-logo.jpg"
+import local506Logo from "@/assets/local-506-logo.jpg"
 import mettlesomeLogo from "@/assets/mettlesome-logo.png"
+import secretCityLogo from "@/assets/secret-city-festival-logo.png"
 import tracksideLogo from "@/assets/trackside-logo.png";
 import defaultLogo from "@/assets/default-logo.png";
+import defaultMusicLogo from "@/assets/guitar-logo.png"
 import defaultStandupLogo from "@/assets/standup-logo.png";
+
+
+interface VenueLogo {
+  src: string;
+  fill?: boolean;
+  invert?: boolean;
+}
 
 export interface Show {
   type: string;
@@ -34,42 +45,52 @@ interface ComedyFlyerProps {
 }
 
 const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProps) => {
-  const getVenueLogo = (show: Show) => {
+  const getVenueLogo = (show: Show): VenueLogo => {
     const typeLower = show.type.toLowerCase().trim();
 
     // Check for Giant Robot Fight Club first
     if (typeLower.includes('giant robot fight club')) {
-      return grfcLogo;
+      return { src: grfcLogo, fill: true };
+    }
+    // Check for Secret City Improv Festival
+    if (show.details?.includes('Secret City')) {
+      return { src: secretCityLogo };
     }
 
     const venueLower = show.venue.toLowerCase().trim();
 
     switch (true) {
       case venueLower.includes('alchemy'):
-        return alchemyLogo;
+        return { src: alchemyLogo };
       case venueLower.includes('arcana'):
-        return arcanaLogo;
-      case venueLower.includes('muses') || venueLower.includes('black sheep') || venueLower.includes('artscenter'):
-        return blackSheepLogo;
+        return { src: arcanaLogo, fill: true };
       case venueLower.includes('comedyworx'):
-        return comedyWorxLogo;
+        return { src: comedyWorxLogo };
       case venueLower.includes('durty bull') || venueLower.includes('durty-bull'):
-        return durtyBullLogo;
+        return { src: durtyBullLogo };
       case venueLower.includes('goodnights'):
-        return goodnightsLogo;
+        return { src: goodnightsLogo };
       case venueLower.includes('kings'):
-        return kingsLogo;
+        return { src: kingsLogo };
+      case venueLower.includes('local 506'):
+        return { src: local506Logo, fill: true };
       case venueLower.includes('mettlesome'):
-        return mettlesomeLogo;
+        return { src: mettlesomeLogo };
+      case venueLower.includes('muses') || venueLower.includes('black sheep') || venueLower.includes('artscenter'):
+        return { src: blackSheepLogo };
       case venueLower.includes('phi'):
-        return lastWordLogo;
+        return { src: lastWordLogo };
       case venueLower.includes('trackside'):
-        return tracksideLogo;
+        return { src: tracksideLogo, invert: true };
+      case venueLower.includes('willow'):
+        return { src: lavaLampLogo, fill: true, invert: true };
       default:
         if (typeLower.includes('stand') || typeLower.includes('open mic')) {
-          return defaultStandupLogo;
+          return { src: defaultStandupLogo };
+        } else if (typeLower.includes('music')) {
+          return { src: defaultMusicLogo };
         }
-        return defaultLogo;
+        return { src: defaultLogo };
     }
   };
 
@@ -155,15 +176,18 @@ const ComedyFlyer = ({ shows, month, year, isFiltered = false }: ComedyFlyerProp
               </div>
 
               {/* Venue Logo */}
-              {getVenueLogo(show) && (
-                <div className={`w-14 h-10 sm:w-20 sm:h-14 bg-white rounded-full flex items-center justify-center ml-2 sm:ml-3 overflow-hidden flex-shrink-0 ${show.type.toLowerCase().includes('giant robot fight club') || show.venue.toLowerCase().includes('arcana') ? '' : 'p-1'}`}>
-                  <img
-                    src={getVenueLogo(show)}
-                    alt={`${show.venue} logo`}
-                    className={`w-full h-full ${show.type.toLowerCase().includes('giant robot fight club') || show.venue.toLowerCase().includes('arcana') ? 'object-cover' : 'object-contain'} ${show.venue.toLowerCase().includes('trackside') ? 'invert' : ''}`}
-                  />
-                </div>
-              )}
+              {(() => {
+                const logo = getVenueLogo(show);
+                return (
+                  <div className={`w-14 h-10 sm:w-20 sm:h-14 bg-white rounded-full flex items-center justify-center ml-2 sm:ml-3 overflow-hidden flex-shrink-0 ${logo.fill ? '' : 'p-1'}`}>
+                    <img
+                      src={logo.src}
+                      alt={`${show.venue} logo`}
+                      className={`w-full h-full ${logo.fill ? 'object-cover' : 'object-contain'} ${logo.invert ? 'invert' : ''}`}
+                    />
+                  </div>
+                );
+              })()}
             </div>
           </div>
         ))}
